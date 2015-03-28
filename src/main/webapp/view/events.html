@@ -1,0 +1,49 @@
+<h3 class="page-header">Liste events</h3>
+
+
+
+<div ng-repeat="event in events">
+		<li class="list-group-item"> <strong>{{event.name  }}</strong> {{event.desc}} {{  event.price  }}&#8364; ->   Le  {{event.date}} </li>
+</div>
+	
+
+</br>
+<form ng-submit="addEvent()" class="form-horizontal">
+	<div class='form-group'>
+		<label class="control-label col-md-2"> Nom : </label>
+		<div class="col-md-4">
+			<input class="form-control" ng-model="event.name" type="text" name="nomEvent" maxlength="50"  required />
+		</div>
+	</div>
+	
+	<div class='form-group'>
+		<label class="control-label col-md-2">  Prix : </label>
+		<div class="col-md-4">
+	<input class="form-control" ng-model="event.price" type="text" name="prixEvent" maxlength="50" required />
+		</div>
+	</div>
+	
+	<div class='form-group'>
+		<label class="control-label col-md-2"> Description : </label>
+		<div class="col-md-4">
+			<input class="form-control" ng-model="event.desc" type="text" name="descriptionEvent" maxlength="50" required />
+		</div>
+	</div>
+	
+	<div class='form-group'>
+		<label class="control-label col-md-2"> Date : </label>
+		<div class="col-md-4">
+			<input class="form-control" ng-model="event.date" type="text" name="dateEvent" maxlength="50" required />
+		</div>
+	</div>
+	
+	<div class='form-group'>
+		<label class="control-label col-md-2"> Place : </label>
+		<div class="col-md-4">
+			<input class="form-control" ng-model="event.place" type="text" name="PlaceEvent" maxlength="50" required/>
+		</div>
+	</div>
+	
+	<input type="submit" class="btn btn-primary" value="Creer l'evenement" />
+	
+</form>
